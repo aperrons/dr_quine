@@ -1,7 +1,3 @@
 #include <stdio.h>
 
-int main() {
-    char *s = "#include <stdio.h>%c%cint main() {%c    char *s = %c%s%c;%c    printf(s, 10, 10, 10, 34, s, 34, 10, 10);%c    return 0;%c}%c";
-    printf(s, 10, 10, 10, 34, s, 34, 10, 10, 10);
-    return 0;
-}
+int main(void) { char *s = "#include <stdio.h>%1$c%1$cint main(void) { char *s = %2$c%3$s%2$c; printf(s,10,34,s); return 0; }"; printf(s,10,34,s); return 0; }
